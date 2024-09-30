@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>register form</title>
+<script type="text/javascript">
+function calc()
+{
+var bp,DA,HRA,GP,PF,tax,deduction,netpay,name,id,desg;
+name=document.form1.firstname.value;
+id=document.form1.userid.value;
+desg=document.form1.designation.value;
+bp=parseInt(document.form1.bp.value);
+DA=bp*0.5;
+HRA=bp*0.5;
+GP=bp+DA+HRA;
+PF=GP*0.01;
+deduction=tax+PF;
+netpay=GP-deduction;
+document.form1.da.value=DA;
+document.form1.hra.value=HRA;
+document.form1.gp.value=GP;	
+document.form1.pf.value=PF;
+document.form1.tax.value=tax;
+document.form1.deduction.value=dedudction;
+document.form1.netpay.value=netpay;
+}
+</script>
+</head>
+<body>
+<form name="form1">
+<table border="1">
+<tr>
+<td>name</td>
+<td><input type="text"name="firstname"/></td>
+</tr>
+<tr>
+<td>user id</td>
+<td><input type="text" name="designation"/></td>
+</tr>
+<tr>
+<td>basic pay</td>
+<td><input type="text" name="bp"></td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<input type="button" name="calculate" value="click here to calculate" onclick="calc()"></td>
+</tr>
+<tr>
+<td>dearness allowance</td>
+<td><input type="text" name="da"/></td>
+</tr>
+<tr>
+<td>house rent allowance</td>
+<td><input type="text" name="hra"></td>
+</tr>
+<tr>
+<td>GP</td>
+<td><input type="text" name="gp"></td>
+</tr>
+<tr>
+<td>provient fund</td>
+<td><input type="text" name="pf"/></td>
+</tr>
+<tr>
+<td>tax</td>
+<td><input type="text" name="tax"/></td>
+</tr>
+<tr>
+<td>deduction</td>
+<td><input type="text" name="deduction"/></td>
+</tr>
+<tr>
+<td>netpay</td>
+<td><input type="text" name="netpay"/></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
